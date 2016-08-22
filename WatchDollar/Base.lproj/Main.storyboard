@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hGu-Rr-Xik">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Custom Nav Controller-->
+        <scene sceneID="sDz-u7-Aug">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="hGu-Rr-Xik" customClass="CustomNavController" customModule="WatchDollar" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UfY-JX-K8k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xXW-3X-zQx" kind="relationship" relationship="rootViewController" id="WUD-6x-hmb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCY-dw-Ifk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-121" y="578"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="ywk-Hr-VMF">
+            <objects>
+                <viewController id="D04-d3-aZx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="onK-SJ-Zjj"/>
+                        <viewControllerLayoutGuide type="bottom" id="1GF-zE-kwm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eld-XC-TaM">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="aQn-UG-EcE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkB-PT-ZDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1392" y="908"/>
+        </scene>
+        <!--Expenses-->
+        <scene sceneID="Xmt-QJ-Img">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Kp-Qu-z6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Expenses" id="c2g-Co-rDi" customClass="ExpenseViewController" customModule="WatchDollar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pb6-bE-EAh"/>
+                        <viewControllerLayoutGuide type="bottom" id="W8P-Bm-fEk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ErD-EU-urZ">
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GMv-zb-6DN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.14117647058823529" green="0.5725490196078431" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="SuO-na-zUM">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SuO-na-zUM" id="Vo4-4h-lPm">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="71"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GMv-zb-6DN" secondAttribute="trailing" id="HUw-El-juT"/>
+                            <constraint firstItem="GMv-zb-6DN" firstAttribute="bottom" secondItem="W8P-Bm-fEk" secondAttribute="top" id="Whj-0P-reZ"/>
+                            <constraint firstItem="GMv-zb-6DN" firstAttribute="leading" secondItem="ErD-EU-urZ" secondAttribute="leading" id="b1d-BB-9jU"/>
+                            <constraint firstItem="GMv-zb-6DN" firstAttribute="top" secondItem="ErD-EU-urZ" secondAttribute="top" id="qnC-cY-eBy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Expenses" id="e63-Od-zlZ"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1392" y="247"/>
+        </scene>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="8cB-fo-7a9">
+            <objects>
+                <tabBarController id="xXW-3X-zQx" customClass="CustomTabBarController" customModule="WatchDollar" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="goV-gm-DSh"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="AIu-pt-teY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="c2g-Co-rDi" kind="relationship" relationship="viewControllers" id="vCd-h3-yW8"/>
+                        <segue destination="D04-d3-aZx" kind="relationship" relationship="viewControllers" id="YtY-Er-uVv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eim-et-ZwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="572" y="578"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

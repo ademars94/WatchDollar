@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E5721B8E1D6B8C51008262A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */; };
-		E5721B901D6B8C51008262A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721B8F1D6B8C51008262A0 /* ViewController.swift */; };
+		E5721B901D6B8C51008262A0 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */; };
 		E5721B931D6B8C51008262A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5721B911D6B8C51008262A0 /* Main.storyboard */; };
 		E5721B951D6B8C51008262A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5721B941D6B8C51008262A0 /* Assets.xcassets */; };
 		E5721B981D6B8C51008262A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5721B961D6B8C51008262A0 /* LaunchScreen.storyboard */; };
 		E5721BA31D6B8C51008262A0 /* WatchDollarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721BA21D6B8C51008262A0 /* WatchDollarTests.swift */; };
 		E5721BAE1D6B8C51008262A0 /* WatchDollarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721BAD1D6B8C51008262A0 /* WatchDollarUITests.swift */; };
+		E5721BBC1D6B92C8008262A0 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721BBB1D6B92C8008262A0 /* CustomTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		E5721B8A1D6B8C51008262A0 /* WatchDollar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDollar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5721B8F1D6B8C51008262A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
 		E5721B921D6B8C51008262A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5721B941D6B8C51008262A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5721B971D6B8C51008262A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		E5721BA91D6B8C51008262A0 /* WatchDollarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchDollarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5721BAD1D6B8C51008262A0 /* WatchDollarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDollarUITests.swift; sourceTree = "<group>"; };
 		E5721BAF1D6B8C51008262A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5721BBB1D6B92C8008262A0 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */,
-				E5721B8F1D6B8C51008262A0 /* ViewController.swift */,
+				E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */,
+				E5721BBB1D6B92C8008262A0 /* CustomTabBarController.swift */,
 				E5721B911D6B8C51008262A0 /* Main.storyboard */,
 				E5721B941D6B8C51008262A0 /* Assets.xcassets */,
 				E5721B961D6B8C51008262A0 /* LaunchScreen.storyboard */,
@@ -256,8 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5721B901D6B8C51008262A0 /* ViewController.swift in Sources */,
+				E5721B901D6B8C51008262A0 /* ExpenseViewController.swift in Sources */,
 				E5721B8E1D6B8C51008262A0 /* AppDelegate.swift in Sources */,
+				E5721BBC1D6B92C8008262A0 /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WatchDollar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexdemars.WatchDollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WatchDollar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexdemars.WatchDollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
