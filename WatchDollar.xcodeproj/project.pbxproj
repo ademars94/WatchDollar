@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93DAD597226E3716F2BD62B0 /* Pods_WatchDollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE4C2E1066461BBD0AE24CC /* Pods_WatchDollar.framework */; };
 		E5721B8E1D6B8C51008262A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */; };
 		E5721B901D6B8C51008262A0 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */; };
 		E5721B931D6B8C51008262A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5721B911D6B8C51008262A0 /* Main.storyboard */; };
@@ -34,7 +35,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FABD2FDC1D6C212A00EF9C93 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		10FA61B6DAE5EBF80DC43E97 /* Pods-WatchDollar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDollar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDollar/Pods-WatchDollar.debug.xcconfig"; sourceTree = "<group>"; };
+		7BE4C2E1066461BBD0AE24CC /* Pods_WatchDollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchDollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5721B8A1D6B8C51008262A0 /* WatchDollar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDollar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +65,8 @@
 		E5721BAD1D6B8C51008262A0 /* WatchDollarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDollarUITests.swift; sourceTree = "<group>"; };
 		E5721BAF1D6B8C51008262A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5721BBB1D6B92C8008262A0 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		EF970BE01DCCC7ACC5A6B97A /* Pods-WatchDollar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDollar.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDollar/Pods-WatchDollar.release.xcconfig"; sourceTree = "<group>"; };
+		FABD2FD51D6C191600EF9C93 /* WatchDollar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchDollar-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DAD597226E3716F2BD62B0 /* Pods_WatchDollar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BC017622E7B42251605AE0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BE4C2E1066461BBD0AE24CC /* Pods_WatchDollar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDB25CE1547B00A5DCDCB409 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10FA61B6DAE5EBF80DC43E97 /* Pods-WatchDollar.debug.xcconfig */,
+				EF970BE01DCCC7ACC5A6B97A /* Pods-WatchDollar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E5721B811D6B8C51008262A0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +119,8 @@
 				E5721BA11D6B8C51008262A0 /* WatchDollarTests */,
 				E5721BAC1D6B8C51008262A0 /* WatchDollarUITests */,
 				E5721B8B1D6B8C51008262A0 /* Products */,
+				CDB25CE1547B00A5DCDCB409 /* Pods */,
+				8BC017622E7B42251605AE0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +137,10 @@
 		E5721B8C1D6B8C51008262A0 /* WatchDollar */ = {
 			isa = PBXGroup;
 			children = (
+				FABD2FD51D6C191600EF9C93 /* WatchDollar-Bridging-Header.h */,
 				E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */,
-				E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */,
 				E5721BBB1D6B92C8008262A0 /* CustomTabBarController.swift */,
+				E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */,
 				E5721B911D6B8C51008262A0 /* Main.storyboard */,
 				E5721B941D6B8C51008262A0 /* Assets.xcassets */,
 				E5721B961D6B8C51008262A0 /* LaunchScreen.storyboard */,
@@ -135,9 +174,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5721BB21D6B8C51008262A0 /* Build configuration list for PBXNativeTarget "WatchDollar" */;
 			buildPhases = (
+				3B19ABBB8546B0A0BD004E28 /* [CP] Check Pods Manifest.lock */,
 				E5721B861D6B8C51008262A0 /* Sources */,
 				E5721B871D6B8C51008262A0 /* Frameworks */,
 				E5721B881D6B8C51008262A0 /* Resources */,
+				9413404CFE68EF62E6D484BF /* [CP] Embed Pods Frameworks */,
+				CD80C8BD4659C7C41B456D0D /* [CP] Copy Pods Resources */,
+				FABD2FDC1D6C212A00EF9C93 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +239,7 @@
 				TargetAttributes = {
 					E5721B891D6B8C51008262A0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6M346GUPZ3;
 					};
 					E5721B9D1D6B8C51008262A0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -253,6 +297,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B19ABBB8546B0A0BD004E28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9413404CFE68EF62E6D484BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchDollar/Pods-WatchDollar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD80C8BD4659C7C41B456D0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchDollar/Pods-WatchDollar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E5721B861D6B8C51008262A0 /* Sources */ = {
@@ -401,25 +493,34 @@
 		};
 		E5721BB31D6B8C51008262A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10FA61B6DAE5EBF80DC43E97 /* Pods-WatchDollar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchDollar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexdemars.WatchDollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WatchDollar/WatchDollar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E5721BB41D6B8C51008262A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF970BE01DCCC7ACC5A6B97A /* Pods-WatchDollar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WatchDollar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexdemars.WatchDollar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WatchDollar/WatchDollar-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -488,6 +589,7 @@
 				E5721BB41D6B8C51008262A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5721BB51D6B8C51008262A0 /* Build configuration list for PBXNativeTarget "WatchDollarTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +598,7 @@
 				E5721BB71D6B8C51008262A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5721BB81D6B8C51008262A0 /* Build configuration list for PBXNativeTarget "WatchDollarUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +607,7 @@
 				E5721BBA1D6B8C51008262A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
