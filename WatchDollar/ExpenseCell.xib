@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="ExpenseCell" rowHeight="128" id="EP9-Ld-PCd" customClass="ExpenseCell" customModule="WatchDollar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EP9-Ld-PCd" id="Z1h-E4-UV1">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqr-DY-Rz0">
+                        <rect key="frame" x="8" y="71" width="304" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.14117647059999999" green="0.57254901960000004" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTP-5U-AAE">
+                        <rect key="frame" x="8" y="42" width="304" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="6Mf-xE-lPU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-ME-WhK">
+                        <rect key="frame" x="238" y="4" width="74" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="74" id="7eq-q3-9jh"/>
+                            <constraint firstAttribute="height" constant="21" id="P5n-r1-jVM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.14117647059999999" green="0.57254901960000004" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="yqr-DY-Rz0" firstAttribute="top" secondItem="CTP-5U-AAE" secondAttribute="bottom" constant="8" symbolic="YES" id="0Vd-yq-mVv"/>
+                    <constraint firstItem="hcr-ME-WhK" firstAttribute="trailing" secondItem="Z1h-E4-UV1" secondAttribute="trailingMargin" id="9fH-J9-cNr"/>
+                    <constraint firstItem="CTP-5U-AAE" firstAttribute="leading" secondItem="Z1h-E4-UV1" secondAttribute="leadingMargin" id="Eot-HZ-a4L"/>
+                    <constraint firstItem="CTP-5U-AAE" firstAttribute="trailing" secondItem="yqr-DY-Rz0" secondAttribute="trailing" id="FYT-Xb-PFl"/>
+                    <constraint firstItem="CTP-5U-AAE" firstAttribute="leading" secondItem="yqr-DY-Rz0" secondAttribute="leading" id="h3M-9c-h8y"/>
+                    <constraint firstItem="hcr-ME-WhK" firstAttribute="top" secondItem="Z1h-E4-UV1" secondAttribute="topMargin" constant="-4" id="kB0-lt-Sz8"/>
+                    <constraint firstItem="CTP-5U-AAE" firstAttribute="top" secondItem="hcr-ME-WhK" secondAttribute="bottom" constant="17" id="qeL-Og-rh6"/>
+                    <constraint firstItem="hcr-ME-WhK" firstAttribute="trailing" secondItem="CTP-5U-AAE" secondAttribute="trailing" id="v4V-8p-Edc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="categoryLabel" destination="hcr-ME-WhK" id="BeR-o0-Bby"/>
+                <outlet property="nameLabel" destination="CTP-5U-AAE" id="3JF-nG-tpA"/>
+                <outlet property="priceLabel" destination="yqr-DY-Rz0" id="fYq-4O-skq"/>
+            </connections>
+            <point key="canvasLocation" x="416" y="244"/>
+        </tableViewCell>
+    </objects>
+</document>
