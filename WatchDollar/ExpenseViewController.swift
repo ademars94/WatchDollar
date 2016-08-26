@@ -33,8 +33,8 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func getExpenses() -> Void {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         Alamofire.request(.GET, "https://peaceful-coast-28007.herokuapp.com/api/expense/index").validate().responseJSON { response in // 1
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             if let JSON = response.result.value {
                 print("JSON: \(JSON)")
                 self.jsonArray = JSON as? NSMutableArray
@@ -87,6 +87,15 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("ExpenseSegue", sender: self)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    @IBAction func presentModal(sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let modal = storyboard.instantiateViewControllerWithIdentifier(
+            "ModalViewController") as! ModalViewController
+        modal.modalPresentationStyle = .Custom
+        modal.modalTransitionStyle   = .CrossDissolve
+        self.navigationController!.presentViewController(modal, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
