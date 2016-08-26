@@ -18,7 +18,7 @@
                     <view key="view" contentMode="scaleToFill" id="eld-XC-TaM">
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="aQn-UG-EcE"/>
                     <navigationItem key="navigationItem" id="XRi-K5-SDT"/>
@@ -27,11 +27,11 @@
             </objects>
             <point key="canvasLocation" x="1616" y="934"/>
         </scene>
-        <!--Item-->
+        <!--Expenses-->
         <scene sceneID="JAc-SU-XIS">
             <objects>
                 <navigationController id="ijf-E1-Ceo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="BLX-RJ-maV"/>
+                    <tabBarItem key="tabBarItem" title="Expenses" image="expense" selectedImage="expense" id="BLX-RJ-maV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="DNK-Ff-yuX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -47,11 +47,11 @@
             </objects>
             <point key="canvasLocation" x="840" y="247"/>
         </scene>
-        <!--Item-->
+        <!--Statistics-->
         <scene sceneID="KrS-Wg-vAu">
             <objects>
                 <navigationController id="RgS-3n-PWC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9OW-at-Bm4"/>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="stats" id="9OW-at-Bm4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HEo-yr-uSm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -122,6 +122,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <state key="normal" title="Save"/>
+                                            <connections>
+                                                <action selector="saveButton:" destination="ssh-nK-kij" eventType="touchUpInside" id="NYa-fd-q9o"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -181,7 +184,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SuO-na-zUM" id="Vo4-4h-lPm">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="127.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,6 +257,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="ijf-E1-Ceo" kind="relationship" relationship="viewControllers" id="xYT-rm-CaU"/>
@@ -265,6 +269,10 @@
             <point key="canvasLocation" x="66" y="582"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="expense" width="32" height="32"/>
+        <image name="stats" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YQv-b2-jR8"/>
     </inferredMetricsTieBreakers>

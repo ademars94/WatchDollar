@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import Alamofire
 
 class ModalViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let categories:[String] = ["Food", "Entertainment", "Household", "Car", "Apollo", "Rent", "Misc"]
     
-   
+    var itemName:String?
+    var itemCategory:String?
+    var price:String?
+    
     
     @IBOutlet weak var itemNameInput: UITextField!
     @IBOutlet weak var priceInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.itemCategory = self.categories[0]
         // Do any additional setup after loading the view.
     }
 
@@ -32,6 +37,29 @@ class ModalViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func saveButton(sender: AnyObject) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        self.itemName = itemNameInput!.text
+        self.price = priceInput!.text
+        
+        self.saveNewExpense()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func saveNewExpense() {
+        let parameters: [String: AnyObject] = [
+            "itemName"     : self.itemName!,
+            "itemCategory" : self.itemCategory!,
+            "price"        : self.price!
+        ]
+        
+        Alamofire.request(.POST, "https://peaceful-coast-28007.herokuapp.com/api/expense", parameters: parameters, encoding: .JSON)
+            .responseJSON { response in
+                print(response)
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
+    }
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -42,6 +70,10 @@ class ModalViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return categories[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.itemCategory = self.categories[row]
     }
     
 
