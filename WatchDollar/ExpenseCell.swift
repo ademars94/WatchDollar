@@ -10,6 +10,7 @@ import UIKit
 
 class ExpenseCell: UITableViewCell {
 
+    @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!

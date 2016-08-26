@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93DAD597226E3716F2BD62B0 /* Pods_WatchDollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE4C2E1066461BBD0AE24CC /* Pods_WatchDollar.framework */; };
+		E55F648D1D6FD0C200953D35 /* ExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55F648C1D6FD0C200953D35 /* ExpenseDetailViewController.swift */; };
 		E5721B8E1D6B8C51008262A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */; };
 		E5721B901D6B8C51008262A0 /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */; };
 		E5721B931D6B8C51008262A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5721B911D6B8C51008262A0 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		10FA61B6DAE5EBF80DC43E97 /* Pods-WatchDollar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchDollar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchDollar/Pods-WatchDollar.debug.xcconfig"; sourceTree = "<group>"; };
 		7BE4C2E1066461BBD0AE24CC /* Pods_WatchDollar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchDollar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55F648C1D6FD0C200953D35 /* ExpenseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseDetailViewController.swift; sourceTree = "<group>"; };
 		E5721B8A1D6B8C51008262A0 /* WatchDollar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDollar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				E5721B8D1D6B8C51008262A0 /* AppDelegate.swift */,
 				E5721BBB1D6B92C8008262A0 /* CustomTabBarController.swift */,
 				E5721B8F1D6B8C51008262A0 /* ExpenseViewController.swift */,
+				E55F648C1D6FD0C200953D35 /* ExpenseDetailViewController.swift */,
 				E5721B911D6B8C51008262A0 /* Main.storyboard */,
 				E58189691D6EB802004D927C /* ExpenseCell.swift */,
 				E58189671D6EB69D004D927C /* ExpenseCell.xib */,
@@ -360,6 +363,7 @@
 			files = (
 				E581896A1D6EB802004D927C /* ExpenseCell.swift in Sources */,
 				E5721B901D6B8C51008262A0 /* ExpenseViewController.swift in Sources */,
+				E55F648D1D6FD0C200953D35 /* ExpenseDetailViewController.swift in Sources */,
 				E5721B8E1D6B8C51008262A0 /* AppDelegate.swift in Sources */,
 				E5721BBC1D6B92C8008262A0 /* CustomTabBarController.swift in Sources */,
 			);

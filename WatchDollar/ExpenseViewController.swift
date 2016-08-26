@@ -14,16 +14,27 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var tableView: UITableView!
     var jsonArray:NSMutableArray?
     var newArray: Array<String> = []
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nibName = UINib(nibName: "ExpenseCell", bundle:nil)
-        self.tableView.registerNib(nibName, forCellReuseIdentifier: "ExpenseCell")
-        
-        Alamofire.request(.GET, "http://192.168.0.17:1337/api/expense/index").validate().responseJSON { response in // 1
-            print("Response Value: \(response.result.value!)")
-            
+        let expenseCell = UINib(nibName: "ExpenseCell", bundle:nil)
+        self.tableView.registerNib(expenseCell, forCellReuseIdentifier: "ExpenseCell")
+        tableView.backgroundView = self.refreshControl
+        self.refreshControl.addTarget(self, action: #selector(refreshTable), forControlEvents: UIControlEvents.ValueChanged)
+        self.getExpenses()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func getExpenses() -> Void {
+        Alamofire.request(.GET, "https://peaceful-coast-28007.herokuapp.com/api/expense/index").validate().responseJSON { response in // 1
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             if let JSON = response.result.value {
                 print("JSON: \(JSON)")
                 self.jsonArray = JSON as? NSMutableArray
@@ -31,17 +42,17 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
                     let str = item["itemName"]!
                     print("Item: \(str!)")
                 }
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             }
             
             self.tableView.reloadData()
         }
-    
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func refreshTable() -> Void {
+        self.getExpenses()
+        self.tableView.reloadData()
+        self.refreshControl.endRefreshing()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,12 +73,28 @@ class ExpenseViewController: UIViewController, UITableViewDataSource, UITableVie
             let expense = self.jsonArray!.objectAtIndex(indexPath.row)
             print("Expense: \(expense)")
             cell.nameLabel!.text = expense.objectForKey("itemName") as? String
-            cell.categoryLabel!.text = expense.objectForKey("itemCategory") as? String
+            let expenseCategory:String? = expense.objectForKey("itemCategory") as? String
+            let lowercaseCategory = expenseCategory?.lowercaseString
+            cell.categoryLabel!.text = expenseCategory
+            cell.categoryImage!.image = UIImage(named: lowercaseCategory!)
+            
             let price = expense.objectForKey("price") as? String
             cell.priceLabel!.text = "$\(price!)"
         }
         return cell
     }
-
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("ExpenseSegue", sender: self)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ExpenseSegue" {
+            let destination = segue.destinationViewController as? ExpenseDetailViewController,
+            expense = self.jsonArray![(tableView.indexPathForSelectedRow!.row)]
+            destination!.itemName = expense.objectForKey("itemName") as? String
+        }
+    }
 }
 
